@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rollback-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rollback-app
+  template:
+    metadata:
+      labels:
+        app: rollback-app
+    spec:
+      containers:
+        - name: rollback-app
+          image: kubernetes-rollback-app:v1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 5
