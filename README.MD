@@ -37,42 +37,7 @@ This project solves the problem by automating:
 
 🏗️ Architecture
 
-Developer
-    │
-    ▼
-  GitHub
-    │
-    ▼
-  Jenkins
-    │
-    ├── Checkout Source Code
-    │
-    ├── Build Docker Image
-    │
-    ├── Deploy to Kubernetes
-    │
-    └── Verify Deployment
-             │
-       ┌─────┴─────┐
-       │            │
-    SUCCESS      FAILURE
-       │            │
-       ▼            ▼
- New Version    Jenkins executes
- Running        kubectl rollout undo
-                    │
-                    ▼
-             Previous Version
-                Restored
-                    │
-                    ▼
-              Kubernetes
-                    │
-                    ▼
-                 Service
-                    │
-                    ▼
-               Application
+![alt text](image.png)
 
 ---
 
