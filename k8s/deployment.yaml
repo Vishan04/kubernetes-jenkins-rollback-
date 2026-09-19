@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: rollback-app
-          image: kubernetes-rollback-app:v1
+          image: kubernetes-rollback-app:v2
           imagePullPolicy: Never
           ports:
             - containerPort: 5000

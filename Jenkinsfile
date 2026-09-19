@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t kubernetes-rollback-app:v1 ./app'
+                bat 'docker build -t kubernetes-rollback-app:v2 ./app'
             }
         }
 
