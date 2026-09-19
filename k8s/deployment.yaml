@@ -20,7 +20,7 @@ spec:
             - containerPort: 5000
           readinessProbe:
             httpGet:
-              path: /
+              path: /wrong
               port: 5000
             initialDelaySeconds: 5
             periodSeconds: 5
