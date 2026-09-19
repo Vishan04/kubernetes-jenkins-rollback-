@@ -36,9 +36,7 @@ This project solves the problem by automating:
 ---
 
 🏗️ Architecture
-
-![alt text](image.png)
-
+![alt text](screenshots/architecture.jpeg)
 ---
 
 🛠️ Technologies Used
